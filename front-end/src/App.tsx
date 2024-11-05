@@ -53,13 +53,16 @@ function App() {
     };
 
     try {
-      const response = await fetch("https://fastapi-react-c560.onrender.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(features),
-      });
+      const response = await fetch(
+        "https://fastapi-react-c560.onrender.com/predict",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(features),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
