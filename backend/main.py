@@ -10,7 +10,9 @@ with open(model_path, 'rb') as f:
     model = pickle.load(f)
 origins = [
     "http://localhost:5174",
-    "localhost:5174"
+    "localhost:5174",
+    "https://predict-reach-on-time.netlify.app",
+    "predict-reach-on-time.netlify.app"
 ]
 
 
